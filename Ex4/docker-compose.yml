@@ -1,0 +1,11 @@
+version: '3'
+services:
+  backend:
+    build: ./code/backend
+
+  frontend:
+    build: ./code/frontend
+    ports:
+      - 5015:8008
+    depends_on:
+      - backend
